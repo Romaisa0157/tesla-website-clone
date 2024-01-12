@@ -7,17 +7,17 @@ body{
     color:#171a28;
         font-family: "M PLUS 1", sans-serif;
 }
-.menu{
+#menu{
     display: initial;
 }
 .desktop{
     display:none;
 }
-@media (min-width: 768px){
+@media (min-width: 1200px){
 .desktop{
     display:initial;
 }
-.menu{
+#menu{
     display:none;
 }
 
@@ -25,15 +25,15 @@ body{
 header{
     display:grid;
     grid-template-columns: auto 1fr auto;
-    padding: 5px 20px;
+    padding: 15px 20px;
     position: fixed;
     top:0;
     z-index: 2;
     width: 100%;
 }
 a.logo{
-    height: 12px;
-    width: 100px; 
+    height: 20px;
+    width: 120px; 
     color:inherit; 
 }
 header a{
@@ -47,6 +47,10 @@ header nav.centre{
     text-align: center;
 }
 
+.right a {
+    margin-right: -10px; /* Adjust the value as needed */
+  }
+  
 header nav.right{
     text-align: right;
 }
@@ -57,9 +61,25 @@ nav a {
 }
 
 svg.desktop{
-    width: 20px; 
-    height: 20px; 
+    width: 24px; 
+    height: 24px; 
 }
+
+#menu{
+    background: transparent;
+    border: none;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(110, 202, 227, 0.353);
+    backdrop-filter: blur(5px);
+    color: black; /* Set text color */
+    padding: 7px 14px; /* Set padding (top/bottom, left/right) */
+    font-size: 15px; /* Set font size */
+    border-radius: 4px; /* Apply rounded corners */
+    transition: background-color 0.3s, color 0.3s;    
+}
+#menu:hover {
+    background-color: rgb(33, 33, 33); /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
 
 /*Styling for sections*/
 section{
@@ -70,6 +90,107 @@ section{
 
 section .content{
     width: 100%;
-    
+    height: 100%;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    text-align: center;
+    display:grid;
+    grid-template-rows: min-content auto min-content;
+}
+section h1{
+    font-size: 3rem;
+}
 
+section a{
+    color:inherit;
+}
+
+section .buttons a{
+    display: block;
+    background-color: #444;
+    color:white;
+    padding: 12px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+section .buttons a:first-child{
+    background-color: #eee;
+    color:inherit;
+}
+
+/*For Interactivity*/
+section .buttons{
+    display: grid;
+    max-width: 500px;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    column-gap: 20px;
+}
+@media (min-width: 760px)
+{
+    section .buttons{
+        width: 580px;
+        max-width: 720px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+aside{
+    position: fixed;
+    right: -800px;
+    background-color: white;
+    padding: 63px 0px;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+}
+
+aside a{
+    margin: 15px;
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 500;
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+aside a:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+  }
+
+
+aside button.close{
+    padding: 0 1%;
+    font-family: sans-serif;
+    font-size: 30px;
+    border:0;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+}
+aside button.close:hover {
+    background-color: rgb(240, 240, 240);
+    cursor: pointer;
+
+  }
+
+  aside.active{
+    right: 0;
 }
