@@ -11,3 +11,6 @@ document.getElementById('menu').onclick = e => {
     openMenu();
    
 }
+document.querySelector('aside button.close').onclick = e => {
+    closeMenu();
+}
