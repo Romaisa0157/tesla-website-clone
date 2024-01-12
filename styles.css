@@ -1,10 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 body{
     color:#171a28;
+        font-family: "M PLUS 1", sans-serif;
+}
+.menu{
+    display: initial;
+}
+.desktop{
+    display:none;
+}
+@media (min-width: 768px){
+.desktop{
+    display:initial;
+}
+.menu{
+    display:none;
+}
+
 }
 header{
     display:grid;
     grid-template-columns: auto 1fr auto;
     padding: 5px 20px;
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
 }
 a.logo{
     height: 12px;
@@ -22,4 +47,29 @@ header nav.centre{
     text-align: center;
 }
 
+header nav.right{
+    text-align: right;
+}
+/* Styles for the navigation icons */
+nav a {
+    text-decoration: none; 
+    margin: 6px 3px;
+}
 
+svg.desktop{
+    width: 20px; 
+    height: 20px; 
+}
+
+/*Styling for sections*/
+section{
+    height:100vh;
+    background-size: cover;
+    background-position: center center;
+}
+
+section .content{
+    width: 100%;
+    
+
+}
