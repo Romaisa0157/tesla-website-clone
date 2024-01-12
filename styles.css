@@ -1,0 +1,25 @@
+body{
+    color:#171a28;
+}
+header{
+    display:grid;
+    grid-template-columns: auto 1fr auto;
+    padding: 5px 20px;
+}
+a.logo{
+    height: 12px;
+    width: 100px; 
+    color:inherit; 
+}
+header a{
+    color:inherit;
+}
+header nav a{
+        text-decoration:none;
+        padding: 5px 10px;
+}
+header nav.centre{
+    text-align: center;
+}
+
+
